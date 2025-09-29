@@ -1,0 +1,33 @@
+<div class="container-fluid login-container">
+    <div class="row h-100">
+        <!-- Left Panel -->
+        <div class="col-md-6 left-panel">
+            <!-- Espacio gris vacío -->
+        </div>
+
+        <!-- Right Panel -->
+        <div class="col-md-6 right-panel">
+            <div class="login-form">
+                <h1 class="brand-title">{{envs.projectName}}</h1>
+
+                <form>
+                    <div class="mb-3">
+                        <label for="usuario" class="form-label">Usuario:</label>
+                        <input type="text" class="form-control" id="usuario" name="usuario">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="contraseña" class="form-label">Contraseña:</label>
+                        <input type="password" class="form-control" id="contraseña" name="contraseña">
+                    </div>
+
+                    <div class="forgot-password">
+                        <a href="#">¿Ha olvidado su contraseña?</a>
+                    </div>
+                    <!-- Cambiar a button y ver integración -->
+                    <a [routerLink]="['/dashboard']" type="submit" class="btn btn-primary">Iniciar Sesión</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

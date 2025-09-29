@@ -1,0 +1,263 @@
+<!-- Top Bar -->
+<div class="top-bar"></div>
+
+<!-- Header -->
+<div class="header">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col">
+                <h1>EventMaster</h1>
+            </div>
+            <div class="col-auto">
+                <div class="user-info">
+                    <span>Nombre Usuario</span>
+                    <button class="user-dropdown">
+                        <span class="user-icon"></span>
+                        Rol Usuario ▼
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-2 sidebar">
+            <nav>
+                <a href="#" class="sidebar-item active">Dashboard</a>
+                <a href="#" class="sidebar-item">Eventos</a>
+                <a href="#" class="sidebar-item">Ventas</a>
+                <a href="#" class="sidebar-item">Clientes</a>
+                <a href="#" class="sidebar-item">Usuarios</a>
+                <a href="#" class="sidebar-item">Administración</a>
+            </nav>
+            <button class="logout-btn">Cerrar Sesión</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-10 main-content">
+            <div class="row">
+                <!-- Bar Chart -->
+                <div class="col-md-6 mb-3">
+                    <div class="chart-container">
+                        <div class="chart-wrapper">
+                            <canvas id="barChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pie Chart -->
+                <div class="col-md-6 mb-3">
+                    <div class="chart-container">
+                        <div class="chart-wrapper">
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Horizontal Bar Chart -->
+                <div class="col-md-6 mb-3">
+                    <div class="chart-container">
+                        <div class="chart-wrapper">
+                            <canvas id="horizontalBarChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Line Chart -->
+                <div class="col-md-6 mb-3">
+                    <div class="chart-container">
+                        <div class="chart-wrapper">
+                            <canvas id="lineChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Chart.js default configuration
+    Chart.defaults.font.size = 12;
+    Chart.defaults.color = '#666';
+
+    // Bar Chart
+    const barCtx = document.getElementById('barChart').getContext('2d');
+    new Chart(barCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            datasets: [{
+                data: [150, 230, 180, 120, 100, 160, 190],
+                backgroundColor: [
+                    '#8b5cf6', '#8b5cf6', '#8b5cf6', '#8b5cf6',
+                    '#8b5cf6', '#8b5cf6', '#8b5cf6'
+                ],
+                borderRadius: 4,
+                borderSkipped: false
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        color: '#e9ecef'
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false
+                    }
+                }
+            }
+        }
+    });
+
+    // Pie Chart
+    const pieCtx = document.getElementById('pieChart').getContext('2d');
+    new Chart(pieCtx, {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [65, 25, 10],
+                backgroundColor: [
+                    '#4ade80',
+                    '#86efac',
+                    '#bbf7d0'
+                ],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            cutout: '20%'
+        }
+    });
+
+    // Horizontal Bar Chart
+    const hBarCtx = document.getElementById('horizontalBarChart').getContext('2d');
+    new Chart(hBarCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Q1', 'Q2', 'Q3', 'Q4', 'Q5'],
+            datasets: [
+                {
+                    data: [80, 70, 60, 75, 85],
+                    backgroundColor: '#8b5cf6',
+                    borderRadius: 4
+                },
+                {
+                    data: [20, 30, 25, 15, 25],
+                    backgroundColor: '#f87171',
+                    borderRadius: 4
+                },
+                {
+                    data: [30, 25, 35, 30, 20],
+                    backgroundColor: '#38bdf8',
+                    borderRadius: 4
+                },
+                {
+                    data: [40, 45, 50, 35, 30],
+                    backgroundColor: '#fb923c',
+                    borderRadius: 4
+                }
+            ]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                x: {
+                    stacked: true,
+                    grid: {
+                        color: '#e9ecef'
+                    }
+                },
+                y: {
+                    stacked: true,
+                    grid: {
+                        display: false
+                    }
+                }
+            }
+        }
+    });
+
+    // Line Chart
+    const lineCtx = document.getElementById('lineChart').getContext('2d');
+    new Chart(lineCtx, {
+        type: 'line',
+        data: {
+            labels: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+            datasets: [
+                {
+                    data: [75, 25, 80, 40, 85, 30, 70, 20, 90, 50],
+                    borderColor: '#60a5fa',
+                    backgroundColor: 'transparent',
+                    tension: 0.4,
+                    borderWidth: 2,
+                    pointRadius: 3,
+                    pointBackgroundColor: '#60a5fa'
+                },
+                {
+                    data: [45, 65, 35, 70, 25, 80, 40, 75, 30, 85],
+                    borderColor: '#a78bfa',
+                    backgroundColor: 'transparent',
+                    tension: 0.4,
+                    borderWidth: 2,
+                    pointRadius: 3,
+                    pointBackgroundColor: '#a78bfa'
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    grid: {
+                        color: '#e9ecef'
+                    },
+                    ticks: {
+                        stepSize: 25
+                    }
+                },
+                x: {
+                    grid: {
+                        color: '#e9ecef'
+                    }
+                }
+            }
+        }
+    });
+</script>

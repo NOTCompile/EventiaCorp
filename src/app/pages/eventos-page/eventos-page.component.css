@@ -1,0 +1,242 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.top-bar {
+    background-color: #6c5ce7;
+    height: 8px;
+}
+
+.header {
+    background-color: #e9ecef;
+    padding: 15px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.header h1 {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.user-info {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.user-dropdown {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.sidebar {
+    background-color: #e9ecef;
+    min-height: calc(100vh - 70px);
+    padding: 0;
+    border-right: 1px solid #dee2e6;
+}
+
+.sidebar-item {
+    display: block;
+    color: #495057;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.sidebar-item:hover {
+    background-color: #d3d3d3;
+    color: #495057;
+}
+
+.sidebar-item.active {
+    background-color: #d3d3d3;
+    color: #495057;
+}
+
+.main-content {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.logout-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: #6c757d;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.logout-btn:hover {
+    background-color: #5a6268;
+}
+
+.user-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #6c757d;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.page-title {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.search-section {
+    margin-bottom: 20px;
+}
+
+.search-input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    width: 250px;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    color: #666;
+    padding: 8px 10px;
+    margin-left: -35px;
+}
+
+.filter-select {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    background: white;
+    margin-left: 10px;
+}
+
+.add-event-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.add-event-btn:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.event-card {
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.event-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+.event-image {
+    width: 100%;
+    height: 120px;
+    background-color: #c8c8c8;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.event-content {
+    padding: 15px;
+}
+
+.event-title {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.event-organizer {
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.event-description {
+    color: #666;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.event-date {
+    color: #666;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+
+.event-actions {
+    text-align: center;
+}
+
+.modify-btn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 6px 20px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.modify-btn:hover {
+    background-color: #5a6268;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        min-height: auto;
+    }
+
+    .search-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .filter-select {
+        margin-left: 0;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+}
