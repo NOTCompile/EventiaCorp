@@ -1,8 +1,10 @@
-<div class="card">
-  <img [src]="imageUrl" alt="{{ title }}" class="card-img">
-  <div class="card-content">
-    <h3>{{ title }}</h3>
-    <p class="card-description">{{ description }}</p>
-  </div>
-  <button class="card-btn">Más información</button>
+<div class="card shadow-sm custom-card-width-250 custom-hover-lift">
+    <img [src]="imageUrl" [alt]="title" class="card-img-top custom-img-height">
+
+    <div class="card-body">
+        <h5 class="card-title text-truncate">{{ title }}</h5>
+        <p class="card-text text-muted custom-description">{{ description }}</p>
+    </div>
+
+    <a href="#" class="btn btn-primary custom-btn-full">Más información</a>
 </div>
