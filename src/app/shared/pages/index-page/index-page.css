@@ -11,16 +11,24 @@
 }
 
 .index-section {
-  background: linear-gradient(
-    90deg,
-    var(--warning-color),
-    var(--accent-color),
-    var(--warning-color)    
-  );
+  background: linear-gradient(90deg,
+      var(--warning-color),
+      var(--accent-color),
+      var(--warning-color));
   min-height: 93vh;
   margin-top: 62px;
   position: relative;
   overflow: hidden;
+}
+
+
+.components-cards-alignment {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  width: 100%;
+  justify-items: center;
 }
 
 .index-section::before {

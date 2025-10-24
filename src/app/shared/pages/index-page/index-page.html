@@ -3,15 +3,10 @@
     <a class="navbar-brand navbar-brand-eventia" href="#ingresar">
       <i class="fa-regular fa-copyright me-2"></i>Eventia Corp
     </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-    >
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
@@ -38,7 +33,9 @@
   <div class="container bg-light rounded-5 p-5 position-relative z-2">
     <div class="row align-items-center">
       <div class="col-md-6 text-dark text-center">
-        <h1 class="display-4 fw-bold">Centro de Eventos</h1>
+        <div>
+          <h1 class="display-4 fw-bold">Centro de Eventos</h1>
+        </div>
         <p class="lead text-center mt-4">
           Asiste a tu evento preferido atraves de nuestra plataforma, todos los Eventos
           de tu ciudad al alcance de un click
@@ -52,21 +49,12 @@
           <form action="dashboard.html" method="post">
             <div class="mb-3">
               <label class="form-label form-label-finanglobal">Correo Electrónico o Usuario</label>
-              <input
-                type="text"
-                class="form-control form-control-finanglobal"
-                placeholder="Ingresa tu Correo Electrónico o Usuario"
-                required
-              />
+              <input type="text" class="form-control form-control-finanglobal"
+                placeholder="Ingresa tu Correo Electrónico o Usuario" required />
             </div>
             <div class="mb-3">
               <label class="form-label form-label-finanglobal">Contraseña</label>
-              <input
-                type="password"
-                class="form-control form-control-finanglobal"
-                placeholder="Contraseña"
-                required
-              />
+              <input type="password" class="form-control form-control-finanglobal" placeholder="Contraseña" required />
             </div>
             <div class="mb-3 form-check">
               <input type="checkbox" class="form-check-input" id="rememberMe" />
@@ -92,6 +80,17 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="text-center text-uppercase fw-semibold fs-4 text-secondary mt-4 mb-4">
+      EVENTOS ACTUALES
+    </div>
+
+
+    <div class="components-cards-alignment">
+      @for (event of events; track event.id) {
+      <app-card-admin [title]="event.title" [description]="event.description" [imageUrl]="event.imageUrl" class="cards">
+      </app-card-admin>
+      }
     </div>
   </div>
 </section>
