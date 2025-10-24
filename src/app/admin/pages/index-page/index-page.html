@@ -1,1 +1,7 @@
-<p>index-page works!</p>,
+<div class="sidebar-eventia" id="sidebar" [class.collapsed]="isSidebarCollapsed">
+  <app-sidebar></app-sidebar>
+</div>
+
+<div class="main-content-finanglobal" id="mainContent" [class.expanded]="isSidebarCollapsed">
+    <router-outlet></router-outlet>
+</div>

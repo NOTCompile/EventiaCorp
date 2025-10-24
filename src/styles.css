@@ -1,10 +1,10 @@
 /* Colors App */
 :root {
-  --primary-color: #25283D;
+  --primary-color: #25283d;
 
-  --secondary-color: #F7B32B;
+  --secondary-color: #f7b32b;
 
-  --accent-color: #EDF67D;
+  --accent-color: #edf67d;
 
   --success-color: #2e7d32;
 
@@ -62,3 +62,45 @@
   transform: translateY(-2px);
 }
 
+/* Sidebar Global Eventia */
+:root .sidebar-eventia {
+  background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+:root .btn-oculto {
+  display: none;
+}
+
+/* Main-Content Global Eventia */
+.main-content-finanglobal {
+  transition: all 0.3s ease;
+  min-height: 100vh;
+  margin-left: 220px;
+}
+
+/* Nav Expand */
+.main-content-finanglobal.expanded {
+  margin-left: 0px;
+}
+
+@media (max-width: 576px) {
+  .sidebar-eventia {
+    position: fixed;
+    z-index: 1000;
+  }
+
+  .btn-oculto {
+    display: none;
+  }
+
+  .main-content-finanglobal {
+    margin-left: -0px;
+  }
+}
