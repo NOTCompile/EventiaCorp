@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Dashboard",
+    "icon": "fa-solid fa-gauge",
+    "route": "/admin/dashboard"
+  },
+  {
+    "id": 2,
+    "name": "Eventos",
+    "icon": "fa-solid fa-calendar-plus",
+    "route": "/admin/events"
+  },
+  {
+    "id": 3,
+    "name": "Ventas",
+    "icon": "fa-solid fa-dollar-sign",
+    "route": "/admin/sales"
+  },
+  {
+    "id": 4,
+    "name": "Clientes",
+    "icon": "fa-solid fa-users",
+    "route": "/admin/clients"
+  },
+  {
+    "id": 5,
+    "name": "Usuarios Administrativos",
+    "icon": "fa-solid fa-user-tie",
+    "route": "/admin/users"
+  },
+  {
+    "id": 6,
+    "name": "Utilidades",
+    "icon": "fa-solid fa-screwdriver-wrench",
+    "route": "/admin/utilities"
+  }
+]

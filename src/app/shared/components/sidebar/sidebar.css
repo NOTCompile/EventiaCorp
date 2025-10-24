@@ -1,0 +1,38 @@
+/* Hidden del navbar al sidebar */
+.sidebar-eventia.collapsed {
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
+/* Titulo Navegacion Lateral */
+.sidebar-brand-eventia {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.5rem;
+}
+
+/* Contenido Opciones Navegacion Lateral */
+.sidebar-nav-eventia {
+  padding: 1rem 0;
+}
+
+.sidebar-nav-eventia .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sidebar-nav-eventia .nav-link:hover,
+.sidebar-nav-eventia .nav-link.active {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav-eventia .nav-link i {
+  width: 20px;
+  margin-right: 0.75rem;
+}

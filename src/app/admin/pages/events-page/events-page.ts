@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-menu-lateral-opciones',
+  selector: 'app-events-page',
   imports: [],
-  templateUrl: './menu-lateral-opciones.component.html',
+  templateUrl: './events-page.html',
+  styleUrl: './events-page.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MenuLateralOpcionesComponent { }
+export default class EventsPage { }
