@@ -1,1 +1,160 @@
-<p>index-page works!</p>,
+<nav class="navbar navbar-expand-lg navbar-dark  fixed-top navbar-eventia">
+  <div class="container">
+    <a class="navbar-brand navbar-brand-eventia" href="#ingresar">
+      <i class="fa-regular fa-copyright me-2"></i>Eventia Corp
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#servicios">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#nosotros">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contacto">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-light ms-2" href="#ingresar">
+            <i class="fas fa-sign-in-alt me-1"></i>Ingresar
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Section -->
+<section class="index-section d-flex align-items-center" id="ingresar">
+  <div class="container bg-light rounded-5 p-5 position-relative z-2">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-dark text-center">
+        <h1 class="display-4 fw-bold">Centro de Eventos</h1>
+        <p class="lead text-center mt-4">
+          Asiste a tu evento preferido atraves de nuestra plataforma, todos los Eventos
+          de tu ciudad al alcance de un click
+        </p>
+      </div>
+      <div class="col-lg-6 mt-4 mt-lg-0">
+        <div class="card-finanglobal">
+          <h3 class="text-center mb-4">Ingresar al Sistema</h3>
+
+          <!-- Formulario Iniciar Sesión -->
+          <form action="dashboard.html" method="post">
+            <div class="mb-3">
+              <label class="form-label form-label-finanglobal">Correo Electrónico o Usuario</label>
+              <input
+                type="text"
+                class="form-control form-control-finanglobal"
+                placeholder="Ingresa tu Correo Electrónico o Usuario"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label form-label-finanglobal">Contraseña</label>
+              <input
+                type="password"
+                class="form-control form-control-finanglobal"
+                placeholder="Contraseña"
+                required
+              />
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="rememberMe" />
+              <label class="form-check-label" for="rememberMe">Recordarme</label>
+            </div>
+            <button type="submit" class="btn btn-eventia w-100 btn-lg">
+              <i class="fas fa-sign-in-alt me-2"></i>Ingresar
+            </button>
+          </form>
+
+          <!-- ¿? Contraseña -->
+          <div class="text-center mt-3">
+            <a href="#" class="text-decoration-none">¿Olvidaste tu contraseña?</a>
+          </div>
+          <hr />
+
+          <!-- Crear cuenta -->
+          <div class="text-center">
+            <small class="text-muted">¿No tienes cuenta?</small><br />
+            <a [routerLink]="['/register']" class="btn btn-eventia-outline mt-2">
+              Crear cuenta nueva
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <h5 class="navbar-brand-finanglobal">
+          <i class="fa-regular fa-copyright me-2"></i>Eventia Corp
+        </h5>
+        <p class="mt-3">
+          Asiste a tu evento preferido atraves de nuestra plataforma, todos los Eventos
+          de tu ciudad al alcance de un click
+        </p>
+        <div class="social-links mt-3">
+          <a href="#" class="text-light me-3 fs-5"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-light me-3 fs-5"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-light me-3 fs-5"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-light fs-5"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="col-md-2 mb-4">
+        <h6>Servicios</h6>
+        <ul class="list-unstyled">
+          <li>
+            <a class="text-light text-decoration-none">Comprar entradas</a>
+          </li>
+          <li>
+            <a class="text-light text-decoration-none">Organizar evento</a>
+          </li>
+          <li>
+            <a class="text-light text-decoration-none">Control de asistencia</a>
+          </li>
+          <li>
+            <a class="text-light text-decoration-none">Pago Online</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 mb-4">
+        <h6>Ayuda</h6>
+        <ul class="list-unstyled">
+          <li><a class="text-light text-decoration-none">Centro de Ayuda</a></li>
+          <li><a class="text-light text-decoration-none">Contacto</a></li>
+          <li><a class="text-light text-decoration-none">Reclamos</a></li>
+          <li><a class="text-light text-decoration-none">Términos y Condiciones</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h6>Información de Contacto</h6>
+        <p><i class="fas fa-map-marker-alt me-2"></i>Calle Rodriguez Ballón 207-A</p>
+        <p><i class="fas fa-phone me-2"></i>+51 963023181</p>
+        <p><i class="fas fa-envelope me-2"></i>contacto@eventicorp.com.pe</p>
+        <p><i class="fas fa-clock me-2"></i>Atención 24/7 Online</p>
+      </div>
+    </div>
+    <hr class="my-4" />
+    <div class="row align-items-center">
+      <div class="col-md-12 text-center">
+        <p class="mb-0">&copy; 2025 Eventia Corp S.A.C. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </div>
+</footer>
