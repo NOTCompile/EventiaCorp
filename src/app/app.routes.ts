@@ -32,11 +32,7 @@ export const routes: Routes = [
       {
         path: 'utilities',
         loadComponent: () => import('./admin/pages/utilities-page/utilities-page'),
-      },
-      {
-        path: '**',
-        redirectTo: 'dashboard',
-      },
+      }
     ],
   },
   {

@@ -74,33 +74,86 @@
   transition: all 0.3s ease;
 }
 
+.sidebar-eventia.collapsed {
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
 :root .btn-oculto {
   display: none;
 }
 
 /* Main-Content Global Eventia */
-.main-content-finanglobal {
+.main-content-eventia {
   transition: all 0.3s ease;
   min-height: 100vh;
   margin-left: 220px;
 }
 
 /* Nav Expand */
-.main-content-finanglobal.expanded {
+.main-content-eventia.expanded {
   margin-left: 0px;
 }
 
 @media (max-width: 576px) {
-  .sidebar-eventia {
+  :root .sidebar-eventia {
     position: fixed;
     z-index: 1000;
   }
 
-  .btn-oculto {
-    display: none;
+  :root .btn-oculto {
+    display: initial;
   }
 
-  .main-content-finanglobal {
+  .main-content-eventia {
     margin-left: -0px;
+  }
+
+  :root .btn-eventia {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
