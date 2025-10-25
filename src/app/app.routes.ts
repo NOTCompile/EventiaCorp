@@ -6,6 +6,10 @@ export const routes: Routes = [
     loadComponent: () => import('./shared/pages/index-page/index-page'),
   },
   {
+    path: 'register',
+    loadComponent: () => import('./shared/pages/register-page/register-page'),
+  },
+  {
     path: 'admin',
     loadComponent: () => import('./admin/pages/index-page/index-page'),
     children: [
@@ -32,7 +36,11 @@ export const routes: Routes = [
       {
         path: 'utilities',
         loadComponent: () => import('./admin/pages/utilities-page/utilities-page'),
-      }
+      },
+      {
+        path: '**',
+        redirectTo: 'dashboard',
+      },
     ],
   },
   {

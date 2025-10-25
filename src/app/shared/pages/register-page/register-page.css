@@ -1,0 +1,65 @@
+/* Login styles */
+.login-container-eventia {
+  background: linear-gradient(
+    90deg,
+    var(--warning-color),
+    var(--accent-color),
+    var(--warning-color)
+  );
+  min-height: 93vh;
+  margin-top: 62px;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container-eventia::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://blogs.unsw.edu.au/nowideas/files/2020/03/eventos-corporativos.jpg');
+  background-size: cover;
+  opacity: 0.3;
+}
+
+.login-card-eventia {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+}
+
+/* Card */
+.card-eventia {
+  background: rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.card-eventia:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.card-eventia-compact {
+  background: white;
+  backdrop-filter: blur(20px);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.card-eventia-compact:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}

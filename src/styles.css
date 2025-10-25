@@ -37,12 +37,12 @@
   padding: 12px 30px;
   border-radius: 50px;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 10px var(--primary-color);
+  box-shadow: 0 3px 10px var(--accent-color);
 }
 
 .btn-eventia:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px var(--accent-color);
+  box-shadow: 0 8px 15px var(--warning-color);
   color: white;
 }
 
