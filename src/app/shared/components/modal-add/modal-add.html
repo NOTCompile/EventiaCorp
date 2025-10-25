@@ -1,0 +1,35 @@
+@if (modalState.isOpen()) {
+<div
+  class="modal fade show d-block animate-modal"
+  tabindex="-1"
+  role="dialog"
+  style="animation: fadeIn 0.3s ease"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow-lg rounded-3 border-0">
+      <!-- Modal Title -->
+      <div class="modal-header bg-warning text-white">
+        <h5 class="modal-title">{{ option }}</h5>
+        <button type="button" class="btn-close btn-close-white" (click)="closeModal()"></button>
+      </div>
+      @if (option === 'event') {
+      <!-- Modal Content -->
+      <div class="modal-body">
+        <app-form-add-event></app-form-add-event>
+      </div>
+      } @else if (option === 'sales') {
+      <div class="modal-body">
+        <app-form-add-sales></app-form-add-sales>
+      </div>
+      } @else if (option === 'client') { }@else if (option === 'users') { }
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <button class="btn btn-outline-secondary" (click)="closeModal()">Cerrar</button>
+        <button class="btn btn-success">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop fade show"></div>
+}

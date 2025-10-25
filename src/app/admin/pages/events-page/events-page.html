@@ -1,1 +1,47 @@
-<p>events-page works!</p>,
+<div class="p-4">
+  <!-- Section Filter -->
+  <form class="row g-3" name="form" id="form" #formulario="ngForm">
+    <div class="col-4">
+      <label class="align-middle" for="codigo">Buscar: </label>
+      <div class="form-group input-group">
+        <input
+          type="text"
+          name="search"
+          class="form-control"
+          [(ngModel)]="codigo"
+          #codigo="ngModel"
+          required="true"
+          placeholder="Ingrese su Código"
+        />
+        <button class="btn btn-outline-secondary" type="button">Buscar</button>
+      </div>
+    </div>
+    <div class="col-3">
+      <label class="align-middle" for="codigo">Estado: </label>
+      <select id="inputState" class="form-select">
+        <option selected>Seleccione...</option>
+        <option>Activo</option>
+        <option>Inactivo</option>
+      </select>
+    </div>
+    <div class="col-3">
+      <label class="align-middle" for="codigo">Ubicacion: </label>
+      <select id="inputState" class="form-select">
+        <option selected>Seleccione...</option>
+        <option>Aqui</option>
+        <option>Haya</option>
+      </select>
+    </div>
+    <div class="col-2">
+      <div class="d-flex flex-column">
+        <button class="btn btn-eventia mt-3" (click)="openModal()">Nueva Venta</button>
+      </div>
+    </div>
+  </form>
+  <hr />
+  <!-- Section Content -->
+  <div></div>
+
+  <!-- Modal -->
+  <app-modal-add-event [option]="typeData()" ></app-modal-add-event>
+</div>

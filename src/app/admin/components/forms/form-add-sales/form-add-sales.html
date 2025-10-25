@@ -1,0 +1,48 @@
+<form (ngSubmit)="guardar()">
+  <!-- declarar  [formGroup]="usuarioForm" -->
+  <div class="mb-3">
+    <label>ID:</label>
+    <input class="form-control" formControlName="id" type="number" />
+  </div>
+  <div class="mb-3">
+    <label>Evento</label>
+    <select class="form-select" formControlName="type">
+      <option selected>Seleccione...</option>
+      <option value="**">Show</option>
+      <option value="**">Cumpleaños</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label>Tipo</label>
+    <select class="form-select" formControlName="type">
+      <option selected>Seleccione...</option>
+      <option value="**">Show</option>
+      <option value="**">Cumpleaños</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label>Tipo</label>
+    <select class="form-select" formControlName="type">
+      <option selected>Seleccione...</option>
+      <option value="*">Show</option>
+      <option value="*">Cumpleaños</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label>Organizador:</label>
+    <select class="form-select" formControlName="organization">
+      <option selected>Seleccione...</option>
+      <option value="*">Idk</option>
+      <option value="*">Master & Media</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label>Estado</label>
+    <select class="form-select" formControlName="state">
+      <option selected>Seleccione...</option>
+      <option value="**">Vacantes</option>
+      <option value="**">Lleno</option>
+      <option value="**">Finalizado</option>
+    </select>
+  </div>
+</form>
