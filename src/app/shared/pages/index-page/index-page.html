@@ -83,9 +83,7 @@
     </div>
     <div class="text-center text-uppercase fw-semibold fs-4 text-secondary mt-4 mb-4">
       EVENTOS ACTUALES
-    </div>
-
-
+    </div>  
     <div class="components-cards-alignment">
       @for (event of events; track event.id) {
       <app-card-admin [title]="event.title" [description]="event.description" [imageUrl]="event.imageUrl" class="cards">
