@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Evento 1",
+    "description": "Hora: 4:00 pm\nLugar: Arequipa\nOrganizado por: ReneAlonso",
+    "imageUrl": "https://images7.memedroid.com/images/UPLOADED798/60e533d8957ec.jpeg"
+  },
+  {
+    "id": 2,
+    "title": "Evento 2",
+    "description": "Hora: 5:00 pm\nLugar: Ancash\nOrganizado por: Frego",
+    "imageUrl": "https://images7.memedroid.com/images/UPLOADED318/68fb39582ebd5.webp"
+  },
+  {
+    "id": 3,
+    "title": "Evento 2",
+    "description": "Hora: 5:00 pm\nLugar: Ancash\nOrganizado por: Frego",
+    "imageUrl": "https://images7.memedroid.com/images/UPLOADED318/68fb39582ebd5.webp"
+  },
+  {
+    "id": 4,
+    "title": "Evento 5",
+    "description": "Hora: 5:00 pm\nLugar: Ancash\nOrganizado por: Frego",
+    "imageUrl": "https://images7.memedroid.com/images/UPLOADED318/68fb39582ebd5.webp"
+  }
+]
