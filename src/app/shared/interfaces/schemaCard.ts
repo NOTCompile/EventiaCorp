@@ -1,5 +1,6 @@
-export interface SchemaCards {
+export interface schemaCard {
   id: number;
-  name: string;
-  icon: string;
+  title: string;
+  description: string;
+  imageUrl: string;
 }

@@ -1,3 +1,25 @@
-:host {
-  display: block;
+.custom-card-width-250 {
+    width: 250px;
+    transition: transform 0.2s;
+}
+
+.custom-hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+.custom-img-height {
+    height: 150px;
+    object-fit: cover;
+}
+
+.custom-description {
+    white-space: pre-line;
+    font-size: 0.95em;
+}
+
+.custom-btn-full {
+    display: block;
+    width: calc(100% - 30px);
+    margin: 0px 15px 15px 15px;
+    padding: 8px 0;
 }
