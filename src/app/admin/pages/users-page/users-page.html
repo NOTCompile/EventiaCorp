@@ -1,1 +1,77 @@
-<p>users-page works!</p>,
+<div class="p-4">
+  <!-- Section Filter -->
+  <form class="row g-3" name="form" id="form" #formulario="ngForm">
+    <div class="col-4">
+      <label class="align-middle" for="codigo">Buscar: </label>
+      <div class="form-group input-group">
+        <input
+          type="text"
+          name="search"
+          class="form-control"
+          [(ngModel)]="codigo"
+          #codigo="ngModel"
+          required="true"
+          placeholder="Ingrese su Código"
+        />
+        <button class="btn btn-outline-secondary" type="button">Buscar</button>
+      </div>
+    </div>
+    <div class="col-3">
+      <label class="align-middle" for="codigo">Estado: </label>
+      <select id="inputState" class="form-select">
+        <option selected>Seleccione...</option>
+        <option>Activo</option>
+        <option>Inactivo</option>
+      </select>
+    </div>
+    <div class="col-3">
+      <label class="align-middle" for="codigo">Rol: </label>
+      <select id="inputState" class="form-select">
+        <option selected>Seleccione...</option>
+        <option>Adminstrador</option>
+        <option>Personal</option>
+        <option>Cliente</option>
+      </select>
+    </div>
+    <div class="col-2">
+      <div class="d-flex flex-column">
+        <button class="btn btn-eventia mt-3" type="button" (click)="openModal()">Nuevo Usuario</button>
+      </div>
+    </div>
+  </form>
+  <hr />
+  <!-- Section Table -->
+  <div class="">
+    <table class="table table-bordered">
+      <thead>
+        <tr class="text-center">
+          <th>Código</th>
+          <th>Nombre Usuario</th>
+          <th>DNI</th>
+          <th>Celular</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- @for (item of empleados; track item) { -->
+        <!-- aca se declara la tabla obtenida -->
+        <tr class="text-end align-middle">
+          <td style="width: 100px">data</td>
+          <td>data</td>
+          <td>data</td>
+          <td>data</td>
+          <td style="width: 150px">
+            <div class="d-flex justify-content-around">
+              <button class="btn btn-warning"><i class="fa-solid fa-pencil"></i></button>
+              <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+            </div>
+          </td>
+        </tr>
+        <!-- } -->
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Modal -->
+  <app-modal-add-event [option]="typeData()" ></app-modal-add-event>
+</div>

@@ -13,10 +13,10 @@ export const routes: Routes = [
     path: 'admin',
     loadComponent: () => import('./admin/pages/index-page/index-page'),
     children: [
-      {
+/*       {
         path: 'dashboard',
         loadComponent: () => import('./admin/pages/dashboard-page/dashboard-page'),
-      },
+      }, */
       {
         path: 'events',
         loadComponent: () => import('./admin/pages/events-page/events-page'),
@@ -39,7 +39,7 @@ export const routes: Routes = [
       },
       {
         path: '**',
-        redirectTo: 'dashboard',
+        redirectTo: 'events',
       },
     ],
   },

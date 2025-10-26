@@ -9,19 +9,38 @@
     <div class="modal-content shadow-lg rounded-3 border-0">
       <!-- Modal Title -->
       <div class="modal-header bg-warning text-white">
-        <h5 class="modal-title">{{ option }}</h5>
+        <h5 class="modal-title">{{ option() }}</h5>
         <button type="button" class="btn-close btn-close-white" (click)="closeModal()"></button>
       </div>
-      @if (option === 'event') {
-      <!-- Modal Content -->
+      @switch (option()) { @case ('event') {
       <div class="modal-body">
         <app-form-add-event></app-form-add-event>
       </div>
-      } @else if (option === 'sales') {
+      } @case ('sales') {
       <div class="modal-body">
         <app-form-add-sales></app-form-add-sales>
       </div>
-      } @else if (option === 'client') { }@else if (option === 'users') { }
+      } @case ('client') {
+      <div class="modal-body">
+        <app-form-add-client></app-form-add-client>
+      </div>
+      } @case ('user') {
+      <div class="modal-body">
+        <app-form-add-user></app-form-add-user>
+      </div>
+      } @case ('role_user') {
+      <div class="modal-body">
+        <app-form-add-role></app-form-add-role>
+      </div>
+      } @case ('type_event') {
+      <div class="modal-body">
+        <app-form-add-state-event></app-form-add-state-event>
+      </div>
+      } @case ('state_event') {
+      <div class="modal-body">
+        <app-form-add-type-event></app-form-add-type-event>
+      </div>
+      } }
       <!-- Modal Footer -->
       <div class="modal-footer">
         <button class="btn btn-outline-secondary" (click)="closeModal()">Cerrar</button>

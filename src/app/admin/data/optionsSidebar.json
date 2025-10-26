@@ -1,11 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Dashboard",
-    "icon": "fa-solid fa-gauge",
-    "route": "/admin/dashboard"
-  },
-  {
     "id": 2,
     "name": "Eventos",
     "icon": "fa-solid fa-calendar-plus",

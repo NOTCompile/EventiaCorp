@@ -1,0 +1,76 @@
+<form (ngSubmit)="guardar()">
+  <!-- declarar  [formGroup]="usuarioForm" -->
+  <div class="mb-3">
+    <label>ID:</label>
+    <input class="form-control" formControlName="id" type="number" />
+  </div>
+
+  <div class="mb-3">
+    <label>Username:</label>
+    <input class="form-control" formControlName="username" />
+  </div>
+
+  <div class="mb-3">
+    <label>Correo Electrónico:</label>
+    <input class="form-control" formControlName="lastname" type="email" />
+  </div>
+
+  <div class="mb-3">
+    <label>Contraseña:</label>
+    <input class="form-control" formControlName="username" type="password" />
+  </div>
+
+  <div class="mb-3">
+    <label>Nombre:</label>
+    <input class="form-control" formControlName="name" />
+  </div>
+
+  <div class="mb-3">
+    <label>Apellidos:</label>
+    <input class="form-control" formControlName="lastname" />
+  </div>
+
+  <div class="mb-3">
+    <label>DNI:</label>
+    <input class="form-control" formControlName="dni" type="number" />
+  </div>
+
+  <div class="mb-3">
+    <label>Edad:</label>
+    <input class="form-control" formControlName="age" type="number" />
+  </div>
+
+  <div class="mb-3">
+    <label>Sexo: </label>
+    <select class="form-select" formControlName="type">
+      <option selected>Seleccione...</option>
+      <option value="Masculino">Masculino</option>
+      <option value="Femenino">Femenino</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label>Edad:</label>
+    <input class="form-control" formControlName="age" type="number" />
+  </div>
+
+  <div class="mb-3">
+    <label>Telefono:</label>
+    <input class="form-control" formControlName="age" type="number" />
+  </div>
+
+  <div class="mb-3">
+    <label>Dirección</label>
+    <textarea class="form-control" formControlName="description" ></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label>Rol:</label>
+    <select class="form-select" formControlName="state">
+      <option selected>Seleccione...</option>
+      <option value="admin">Administrativo</option>
+      <option value="client">Cliente</option>
+      <option value="control">Personal</option>
+    </select>
+  </div>
+</form>
