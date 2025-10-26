@@ -11,6 +11,15 @@
   overflow: hidden;
 }
 
+.container {
+  .cards:hover {
+  box-shadow: 0 8px 16px rgba(179, 22, 22, 0.3); /* Cambia el box-shadow al hacer hover */
+}
+.container {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+}
+
 .index-section::before {
   content: '';
   position: absolute;
