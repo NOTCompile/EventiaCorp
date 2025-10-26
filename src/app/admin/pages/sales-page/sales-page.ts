@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, signal} from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ModalStateService } from 'src/app/shared/services/modalState';
 import { CommonModule } from '@angular/common';
@@ -12,22 +12,7 @@ import { ModalAddEvent } from 'src/app/shared/components/modal-add/modal-add';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class SalesPage {
-
-  total(arg0: any) {
-    throw new Error('Method not implemented.');
-  }
-  seguro(arg0: any) {
-    throw new Error('Method not implemented.');
-  }
-  afp(arg0: any) {
-    throw new Error('Method not implemented.');
-  }
-  bonificacion(arg0: any) {
-    throw new Error('Method not implemented.');
-  }
-  empleados: any;
-
-    typeData = signal('sales');
+  typeData = signal('sales');
 
   constructor(private modalState: ModalStateService) {}
 

@@ -7,8 +7,8 @@
       <div class="col-md-6 text-dark text-center">
         <h1 class="display-4 fw-bold">Centro de Eventos</h1>
         <p class="lead text-center mt-4">
-          Asiste a tu evento preferido atraves de nuestra plataforma, todos los Eventos
-          de tu ciudad al alcance de un click
+          Asiste a tu evento preferido atraves de nuestra plataforma, todos los Eventos de tu ciudad
+          al alcance de un click
         </p>
       </div>
       <div class="col-lg-6 mt-4 mt-lg-0">
@@ -58,7 +58,6 @@
             </a>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -68,19 +67,21 @@
     <div class="col-12 text-center">
       <h2 class="display-5 fw-bold text-primary mb-3">Eventos Destacados</h2>
       <p class="lead text-muted">Descubre los mejores eventos de tu localidad</p>
-      <div class="border-bottom border-3 border-warning mx-auto" style="width: 100px;"></div>
+      <div class="border-bottom border-3 border-warning mx-auto" style="width: 100px"></div>
     </div>
   </div>
 </div>
+<!-- Cards Events -->
 <div class="container">
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mb-5  ">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mb-5">
     @for (item of dataCard; track item.id) {
-    <div class="col ">
-      <app-card 
-        [title]="item.title" 
-        [description]="item.description" 
-        [imageUrl]="item.imageUrl" 
-        class="cards h-100 ">
+    <div class="col">
+      <app-card
+        [title]="item.title"
+        [description]="item.description"
+        [imageUrl]="item.imageUrl"
+        class="cards h-100"
+      >
       </app-card>
     </div>
     }
@@ -96,8 +97,8 @@
           <i class="fa-regular fa-copyright me-2"></i>Eventia Corp
         </h5>
         <p class="mt-3">
-          Asiste a tu evento preferido atraves de nuestra plataforma, todos los Eventos
-          de tu ciudad al alcance de un click
+          Asiste a tu evento preferido atraves de nuestra plataforma, todos los Eventos de tu ciudad
+          al alcance de un click
         </p>
         <div class="social-links mt-3">
           <a href="#" class="text-light me-3 fs-5"><i class="fab fa-facebook-f"></i></a>

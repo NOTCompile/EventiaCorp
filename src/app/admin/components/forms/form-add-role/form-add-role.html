@@ -1,0 +1,17 @@
+<form (ngSubmit)="guardar()">
+  <!-- declarar  [formGroup]="usuarioForm" -->
+  <div class="mb-3">
+    <label>ID:</label>
+    <input class="form-control" formControlName="id" type="number" />
+  </div>
+
+  <div class="mb-3">
+    <label>Nombre:</label>
+    <input class="form-control" formControlName="name" type="text"/>
+  </div>
+
+  <div class="mb-3">
+    <label>Descripción</label>
+    <input class="form-control" formControlName="description" type="text" />
+  </div>
+</form>
