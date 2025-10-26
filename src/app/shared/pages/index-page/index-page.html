@@ -58,11 +58,18 @@
             </a>
           </div>
         </div>
+
       </div>
     </div>
   </div>
 </section>
 
+<div class="components-cards-alignment">
+    @for (event of events; track event.id) {
+    <app-card-admin [title]="event.title" [description]="event.description" [imageUrl]="event.imageUrl" class="cards">
+    </app-card-admin>
+    }
+</div>
 
 <!-- Footer -->
 <footer class="bg-dark text-white py-5">
